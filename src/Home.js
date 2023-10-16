@@ -6,12 +6,14 @@ const data = [{ option: "TAMIM" }, { option: "LITTON" }, { option: "SHANTO" }, {
 export const Home = () => {
     const [mustSpin, setMustSpin] = useState(false);
     const [prizeNumber, setPrizeNumber] = useState(0);
+    const [winner, setWinner] = useState(0);
 
     const handleSpinClick = () => {
         if (!mustSpin) {
             const newPrizeNumber = Math.floor(Math.random() * data.length);
             setPrizeNumber(newPrizeNumber);
             setMustSpin(true);
+            setWinner(data[newPrizeNumber].option);
         }
     };
     return (
@@ -22,9 +24,10 @@ export const Home = () => {
                 data={data}
                 onStopSpinning={() => {
                     setMustSpin(false);
+                    console.log(winner);
                 }}
             />
-            <button onClick={handleSpinClick}>SPIN</button>
+            <button onClick={handleSpinClick}>Spin It !!</button>
         </>
     );
 };
