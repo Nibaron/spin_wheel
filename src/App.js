@@ -1,9 +1,12 @@
 import './App.css';
-import { Home } from './Home';
+import { Appbar,Home } from './components';
 
 function App() {
   return (
+    <>
+    <Appbar/>
     <Home/>
+    </>
   );
 }
 
