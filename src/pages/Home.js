@@ -28,6 +28,7 @@ export const Home = () => {
             <section style={{ marginTop: "150px" }}>
                 
                 <Wheel
+                    className=""
                     mustStartSpinning={mustSpin}
                     prizeNumber={prizeNumber}
                     data={data}

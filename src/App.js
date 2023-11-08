@@ -1,12 +1,13 @@
-import './App.css';
-import { Appbar,Home } from './components';
+import { AllRoutes } from './routes/AllRoutes';
+import { Footer, Appbar } from './components';
 
 function App() {
   return (
-    <>
-    <Appbar/>
-    <Home/>
-    </>
+    <div className="App dark:bg-slate-800">
+      <Appbar />
+        <AllRoutes/>
+      <Footer /> 
+    </div>
   );
 }
 

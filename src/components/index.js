@@ -1,2 +1,4 @@
 export {Appbar} from "./Appbar";
-export {Home} from "./Home";
+export {Footer} from "./Footer";
+
+export {Button} from "./Button";
